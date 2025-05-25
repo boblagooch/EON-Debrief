@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shift Reflection</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background: #fdf6ec;
+      padding: 2rem;
+      max-width: 650px;
+      margin: auto;
+      color: #3c2f2f;
+    }
+    h1 {
+      text-align: center;
+      color: #c33;
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+    }
+    p.prompt {
+      font-size: 0.95rem;
+      color: #5e4b4b;
+      margin-bottom: 2rem;
+      text-align: center;
+      line-height: 1.4;
+    }
+    label {
+      display: block;
+      margin-top: 1rem;
+      font-weight: 700;
+      color: #7a4444;
+    }
+    textarea {
+      width: 100%;
+      height: 90px;
+      margin-top: 0.5rem;
+      padding: 0.5rem;
+      resize: vertical;
+      font-family: 'Montserrat', sans-serif;
+      border: 1px solid #d8b9a2;
+      border-radius: 4px;
+      background-color: #fffaf7;
+      color: #333;
+    }
+    button {
+      margin-top: 1.5rem;
+      padding: 0.75rem 1.5rem;
+      background-color: #b03a48;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 1rem;
+      box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+    }
+    button:hover {
+      background-color: #8e2e3a;
+    }
+  </style>
+</head>
+<body>
+  <h1>Shift Reflection</h1>
+  <p class="prompt">
+    Feel free to answer any or all of these questions. Answers will help us to identify and address service issues.<br>
+    <strong>Note:</strong> If you have an issue or concern that is more severe than this form allows for PLEASE bring it to someone you trust.
+  </p>
+  <form id="reflectionForm">
+    <label for="q1">1. What’s one thing that went really well tonight?</label>
+    <textarea id="q1" maxlength="250"></textarea>
+
+    <label for="q2">2. Where did we support each other best?</label>
+    <textarea id="q2" maxlength="250"></textarea>
+
+    <label for="q3">3. What’s one thing that did not go really well tonight?</label>
+    <textarea id="q3" maxlength="250"></textarea>
+
+    <label for="q4">4. Do you have a suggestion for how we can improve on it?</label>
+    <textarea id="q4" maxlength="250"></textarea>
+
+    <button type="submit">Submit Reflection</button>
+  </form>
+
+  <script>
+    document.getElementById("reflectionForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+      const answers = {
+        q1: document.getElementById("q1").value,
+        q2: document.getElementById("q2").value,
+        q3: document.getElementById("q3").value,
+        q4: document.getElementById("q4").value
+      };
+      console.log("Reflection submitted:", answers);
+      window.location.href = "https://images.unsplash.com/photo-1603415526960-f8f08a87fe46?auto=format&fit=crop&w=800&q=80";
+    });
+  </script>
+</body>
+</html>
